@@ -1,4 +1,4 @@
-JMX Commandline Client
+JMX Command-line Client
 
   This tool prints attribute values from JMX beans on a remote server.     
 
@@ -42,27 +42,27 @@ JMX Commandline Client
 
      To list al bean names for all domains
 
-     <<<% java -jar cmdline-jmxclient-X.X.jar localhost:51115 '*:*'>>>
+     <<<% java -jar gst-jmx-client-X.X.jar localhost:51115 '*:*'>>>
 
      To list al bean names for the java.lang domain, login with 'controlRole:secret'
 
-     <<<% java -jar cmdline-jmxclient-X.X.jar controlRole:secret@localhost:51115 'java.lang:*'>>>
+     <<<% java -jar gst-jmx-client-X.X.jar controlRole:secret@localhost:51115 'java.lang:*'>>>
 
      To list al attribute names for 'java.lang:type=Runtime'
 
-     <<<% java -jar cmdline-jmxclient-X.X.jar localhost:51115 java.lang:type=Runtime '*'>>>
+     <<<% java -jar gst-jmx-client-X.X.jar localhost:51115 java.lang:type=Runtime '*'>>>
 
      To list al attribute values for 'java.lang:type=Runtime'
 
-     <<<% java -jar cmdline-jmxclient-X.X.jar localhost:51115 java.lang:type=Runtime Attributes>>>
+     <<<% java -jar gst-jmx-client-X.X.jar localhost:51115 java.lang:type=Runtime Attributes>>>
 
      To list attribute 'VmName' for 'java.lang:type=Runtime'
 
-     <<<% java -jar cmdline-jmxclient-X.X.jar localhost:51115 java.lang:type=Runtime VmName>>>
+     <<<% java -jar gst-jmx-client-X.X.jar localhost:51115 java.lang:type=Runtime VmName>>>
 
      To list attribute 'VmName' and 'VmVendor' for 'java.lang:type=Runtime'
 
-     <<<% java -jar cmdline-jmxclient-X.X.jar localhost:51115 java.lang:type=Runtime VmName VmVendor>>>
+     <<<% java -jar gst-jmx-client-X.X.jar localhost:51115 java.lang:type=Runtime VmName VmVendor>>>
 
 Output
  
@@ -71,5 +71,5 @@ Output
 	        
 Credits
 
-  This command line client is a rewrite of {{{http://crawler.archive.org/cmdline-jmxclient/index.html}http://crawler.archive.org/cmdline-jmxclient/index.html}}. 
+  This command line client is a rewrite of {{{http://crawler.archive.org/gst-jmx-client/index.html}http://crawler.archive.org/gst-jmx-client/index.html}}. 
   This version, the GST version, only lists attributes and does not have operations support. It is better support for wildcards.	        
