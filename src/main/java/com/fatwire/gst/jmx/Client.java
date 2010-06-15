@@ -81,10 +81,7 @@ public class Client {
 
 	public static void main(String[] args) throws Exception {
 		Client client = new Client();
-		long t = System.nanoTime();
 		client.execute(args);
-		long t2 = System.nanoTime();
-		System.out.println(Long.toString((t2-t)/1000));
 	}
 
 	protected static void usage() {
