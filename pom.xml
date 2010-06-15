@@ -3,7 +3,7 @@
     <groupId>com.fatwire.gst</groupId>
     <artifactId>gst-jmx-client</artifactId>
     <packaging>jar</packaging>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <name>FatWire GST: JMX command-line client</name>
     <url>http://www.nl.fatwire.com/dta/contrib/gst-jmx-client</url>
     <inceptionYear>2010</inceptionYear>
@@ -17,9 +17,9 @@
         </developer>
     </developers>
     <scm>
-        <connection>scm:svn:http://www.nl.fatwire.com/svn/dta/contrib/gst-jmx-client/tags/gst-jmx-client-1.0</connection>
-        <developerConnection>scm:svn:http://www.nl.fatwire.com/svn/dta/contrib/gst-jmx-client/tags/gst-jmx-client-1.0</developerConnection>
-        <url>http://www.nl.fatwire.com/viewvc/dta/contrib/gst-jmx-client/tags/gst-jmx-client-1.0</url>
+        <connection>scm:svn:http://www.nl.fatwire.com/svn/dta/contrib/gst-jmx-client/trunk</connection>
+        <developerConnection>scm:svn:http://www.nl.fatwire.com/svn/dta/contrib/gst-jmx-client/trunk</developerConnection>
+        <url>http://www.nl.fatwire.com/viewvc/dta/contrib/gst-jmx-client/trunk</url>
     </scm>
 
     <dependencies>
