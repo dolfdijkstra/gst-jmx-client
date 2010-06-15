@@ -42,7 +42,7 @@ public class Client {
 	 * Usage string.
 	 */
 	private static final String USAGE = "Usage: java -jar"
-			+ " cmdline-jmxclient.jar USER:PASS@HOST:PORT [BEAN] [COMMAND]\n"
+			+ " gst-jmx-client.jar USER:PASS@HOST:PORT [BEAN] [COMMAND]\n"
 			+ "Options:\n"
 			+ " USER:PASS Username and password. Not required\n"
 			+ "           E.g. 'controlRole:secret'\n"
@@ -156,7 +156,7 @@ public class Client {
 	/**
 	 * Version of execute called from the cmdline. Prints out result of
 	 * execution on stdout. Parses cmdline args. Then calls
-	 * {@link #execute(String, String, String, String, String[]n)}.
+	 * {@link #execute(String, String, String, String, String[])}.
 	 * 
 	 * @param args
 	 *            Cmdline args.

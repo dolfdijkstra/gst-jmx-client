@@ -1,0 +1,75 @@
+JMX Commandline Client
+
+  This tool prints attribute values from JMX beans on a remote server.     
+
+*  Usage: 
+
+   java -jar gst-jmx-client-\<version\>.jar user:pass@host:port [bean] [command]
+
+*  Options:
+ 
+   * user:pass Username and password. Not required
+   
+             E.g. 'controlRole:secret'
+ 
+   * host:port Hostname and port to connect to. Required.
+   
+             E.g. localhost:8081.
+ 
+   * bean      Optional target bean name. This can be a wildcard name.
+        
+            E.g. java.lang:*
+ 
+   * command   Optional attribute to fetch. Can be repeated for mulitple attributes
+   
+             If '*' supplied, all attributes are listed.
+   
+             Pass 'Attributes' to get listing of all attributes and their values.
+ 
+* Requirements:
+  
+   JDK1.5.0. If connecting to a SUN 1.5.0 JDK JMX Agent, remote side
+   must be
+   started with system properties such as the following:<<<
+       -Dcom.sun.management.jmxremote.port=PORT
+       -Dcom.sun.management.jmxremote.authenticate=false
+       -Dcom.sun.management.jmxremote.ssl=false >>>
+   The above will start the remote server with no password. See
+   http://java.sun.com/j2se/1.5.0/docs/guide/management/agent.html
+   for more on 'Monitoring and Management via JMX'.
+
+*   Client Use Examples:
+
+     To list al bean names for all domains
+
+     <<<% java -jar cmdline-jmxclient-X.X.jar localhost:51115 '*:*'>>>
+
+     To list al bean names for the java.lang domain, login with 'controlRole:secret'
+
+     <<<% java -jar cmdline-jmxclient-X.X.jar controlRole:secret@localhost:51115 'java.lang:*'>>>
+
+     To list al attribute names for 'java.lang:type=Runtime'
+
+     <<<% java -jar cmdline-jmxclient-X.X.jar localhost:51115 java.lang:type=Runtime '*'>>>
+
+     To list al attribute values for 'java.lang:type=Runtime'
+
+     <<<% java -jar cmdline-jmxclient-X.X.jar localhost:51115 java.lang:type=Runtime Attributes>>>
+
+     To list attribute 'VmName' for 'java.lang:type=Runtime'
+
+     <<<% java -jar cmdline-jmxclient-X.X.jar localhost:51115 java.lang:type=Runtime VmName>>>
+
+     To list attribute 'VmName' and 'VmVendor' for 'java.lang:type=Runtime'
+
+     <<<% java -jar cmdline-jmxclient-X.X.jar localhost:51115 java.lang:type=Runtime VmName VmVendor>>>
+
+Output
+ 
+ each line contains the bean name, the attribute name and the attribute value, tab seperated.
+
+	        
+Credits
+
+  This command line client is a rewrite of {{{http://crawler.archive.org/cmdline-jmxclient/index.html}http://crawler.archive.org/cmdline-jmxclient/index.html}}. 
+  This version, the GST version, only lists attributes and does not have operations support. It is better support for wildcards.	        
